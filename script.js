@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     /* 
        ==============================
        PARALLAX SCROLL EFFECT
        ==============================
     */
     const parallaxLayers = document.querySelectorAll('.layer');
-    
+
     // Efficient scroll handling with requestAnimationFrame
     let ticking = false;
     let lastScrollY = window.scrollY;
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
        ==============================
     */
     const animatedElements = document.querySelectorAll('.fade-in-up');
-    
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -57,6 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animatedElements.forEach(el => {
         animationObserver.observe(el);
+    });
+
+    // STICKY HEADER EFFECT
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+        // Om vi har skrollat mer än 50px från toppen
+        if (window.scrollY > 50) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
     });
 
 });

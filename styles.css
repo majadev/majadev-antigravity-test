@@ -8,7 +8,7 @@
     --color-light: #faf9f5;
     --color-mid-gray: #b0aea5;
     --color-light-gray: #e8e6dc;
-    
+
     --color-accent-orange: #d97757;
     --color-accent-blue: #6a9bcc;
     --color-accent-green: #788c5d;
@@ -37,7 +37,17 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, .eyebrow, .btn, .stat, .tier-number, .footer-logo {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.eyebrow,
+.btn,
+.stat,
+.tier-number,
+.footer-logo {
     font-family: var(--font-heading);
     margin-top: 0;
     font-weight: 500;
@@ -59,10 +69,11 @@ a {
 .section {
     position: relative;
     padding: 100px 0;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(250, 249, 245, 0.05); /* Subtle separator */
+    border-bottom: 1px solid rgba(250, 249, 245, 0.05);
+    /* Subtle separator */
 }
 
 /* 
@@ -120,10 +131,21 @@ a {
     transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
 
 /* 
    ==============================
@@ -132,7 +154,10 @@ a {
 */
 .background-layers {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
@@ -142,14 +167,16 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
 }
 
 .layer-bg {
     background: radial-gradient(circle at 50% 50%, rgba(20, 20, 19, 0) 0%, rgba(20, 20, 19, 1) 100%),
-                url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80') center/cover;
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80') center/cover;
     opacity: 0.15;
-    mix-blend-mode: luminosity; /* Duochrome feeling */
+    mix-blend-mode: luminosity;
+    /* Duochrome feeling */
 }
 
 /* Abstract shapes with brand colors for background elegance */
@@ -159,10 +186,37 @@ a {
     opacity: 0.15;
 }
 
-.shape-1 { left: -10%; top: -10%; width: 50vw; height: 50vw; background: var(--color-accent-orange); }
-.shape-2 { right: -20%; top: 30%; width: 60vw; height: 60vw; background: var(--color-accent-blue); }
-.shape-3 { left: 50%; top: 10%; width: 40vw; height: 40vw; background: var(--color-accent-green); }
-.shape-4 { left: -10%; top: 50%; width: 70vw; height: 70vw; background: var(--color-accent-blue); }
+.shape-1 {
+    left: -10%;
+    top: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--color-accent-orange);
+}
+
+.shape-2 {
+    right: -20%;
+    top: 30%;
+    width: 60vw;
+    height: 60vw;
+    background: var(--color-accent-blue);
+}
+
+.shape-3 {
+    left: 50%;
+    top: 10%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--color-accent-green);
+}
+
+.shape-4 {
+    left: -10%;
+    top: 50%;
+    width: 70vw;
+    height: 70vw;
+    background: var(--color-accent-blue);
+}
 
 /*
    ==============================
@@ -171,7 +225,10 @@ a {
 */
 .global-layers {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
@@ -179,7 +236,10 @@ a {
 
 .layer-halftone {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     pointer-events: none;
     z-index: 2;
     background-image: radial-gradient(rgba(250, 249, 245, 0.04) 1.5px, transparent 1.5px);
@@ -189,7 +249,8 @@ a {
 .layer-path {
     width: 100%;
     height: 100%;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     background: url('Reference/lines.png') no-repeat right bottom;
     background-size: contain;
     opacity: 0.9;
@@ -199,10 +260,130 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     background: url('Reference/dots.png') no-repeat right bottom;
-    background-size: auto 80%; /* Takes up 80% of the section height, anchored bottom right */
+    background-size: auto 80%;
+    /* Takes up 80% of the section height, anchored bottom right */
     opacity: 0.8;
+}
+
+/* ==============================
+   NEW: GLOBAL HEADER & NAVIGATION
+   ==============================
+*/
+.header {
+    position: fixed;
+    /* Fixerad i toppen vid skroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    /* Sätt en fast höjd */
+    background-color: rgba(20, 20, 19, 0.9);
+    /* Halvgenomskinlig mörk bakgrund */
+    backdrop-filter: blur(8px);
+    /* Blur-effekt för att se innehåll under */
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(250, 249, 245, 0.05);
+    /* Mycket subtil linje under */
+    z-index: 1000;
+    /* Se till att den ligger över allt annat */
+    display: flex;
+    align-items: center;
+    /* Vertikalt centrerad */
+    transition: background-color 0.3s ease;
+    /* Mjuk övergång vid hover */
+}
+
+.header:hover {
+    background-color: rgba(20, 20, 19, 0.98);
+    /* Blir lite mörkare vid hover */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    /* Logo till vänster, Nav till höger */
+    align-items: center;
+    width: 100%;
+    /* Tar upp hela containerns bredd */
+    padding: 0 5%;
+    /* Matcha containerns padding */
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-light);
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--color-accent-orange);
+    /* Använd accentfärgen vid hover */
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Utrymme mellan länkarna */
+}
+
+.main-nav a {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--color-mid-gray);
+    /* Använd den grå färgen för oaktiva länkar */
+    font-weight: 500;
+    text-transform: uppercase;
+    /* Matcha din footer och eyebrow-stil */
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav a:not(.btn):hover {
+    color: var(--color-light);
+    /* Blir ljus vid hover */
+    transform: translateY(-2px);
+    /* Liten lyft-effekt */
+}
+
+/* Anpassa din existerande .btn-secondary för headern */
+.nav-cta {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    /* Mindre padding än de stora knapparna */
+    text-transform: none;
+    /* Ingen uppercase på knappen */
+    letter-spacing: normal;
+}
+
+/* ==============================
+   ADJUSTMENTS FOR EXISTING CLASSES
+   ==============================
+*/
+/* Justera hero-sektionen så att den inte startar under headern */
+.hero {
+    padding-top: 140px;
+    /* 80px (header) + 60px extra luft */
+}
+
+/* Snabbtillfoga styling för .btn-secondary (du hade bara .btn-primary) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-light);
+    border: 1px solid rgba(250, 249, 245, 0.2);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-blue);
+    border-color: var(--color-accent-blue);
+    color: var(--color-light);
+    box-shadow: 0 0 15px rgba(106, 155, 204, 0.3);
 }
 
 
@@ -275,12 +456,16 @@ a {
 }
 
 .problem-icon {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: rgba(217, 119, 87, 0.1);
     color: var(--color-accent-orange);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: bold; font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: var(--font-heading);
     margin-bottom: 20px;
 }
 
@@ -399,7 +584,9 @@ a {
 .journey-stages::before {
     content: '';
     position: absolute;
-    top: 60px; left: 0; right: 0;
+    top: 60px;
+    left: 0;
+    right: 0;
     height: 2px;
     background: rgba(250, 249, 245, 0.1);
     z-index: 1;
@@ -414,7 +601,8 @@ a {
 }
 
 .stage-dot {
-    width: 20px; height: 20px;
+    width: 20px;
+    height: 20px;
     background-color: var(--color-dark);
     border: 2px solid var(--color-mid-gray);
     border-radius: 50%;
@@ -460,7 +648,8 @@ a {
 }
 
 .avatar {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid var(--color-dark);
     margin-left: -15px;
@@ -468,8 +657,15 @@ a {
     background-position: center;
     background-color: var(--color-accent-blue);
 }
-.avatar:nth-child(1) { margin-left: 0; background-color: var(--color-accent-orange); }
-.avatar:nth-child(2) { background-color: var(--color-accent-green); }
+
+.avatar:nth-child(1) {
+    margin-left: 0;
+    background-color: var(--color-accent-orange);
+}
+
+.avatar:nth-child(2) {
+    background-color: var(--color-accent-green);
+}
 
 .avatar-text {
     margin-left: 15px;
@@ -507,14 +703,18 @@ a {
     font-weight: 600;
 }
 
-.footer-nav a, .footer-legal a, .footer-social a {
+.footer-nav a,
+.footer-legal a,
+.footer-social a {
     color: var(--color-mid-gray);
     margin-right: 20px;
     font-size: 0.9rem;
     transition: color 0.2s ease;
 }
 
-.footer-nav a:hover, .footer-legal a:hover, .footer-social a:hover {
+.footer-nav a:hover,
+.footer-legal a:hover,
+.footer-social a:hover {
     color: var(--color-light);
 }
 
@@ -524,35 +724,83 @@ a {
     font-size: 0.9rem;
 }
 
+.header-scrolled {
+    background-color: rgba(20, 20, 19, 0.98);
+    /* Blir nästan helt mörk */
+    height: 70px;
+    /* Krymper lite */
+}
+
+.philosophy-content {
+    margin-top: 2rem;
+}
+
 /* 
    ==============================
    RESPONSIVENESS
    ==============================
 */
 @media (max-width: 900px) {
-    .headline { font-size: 3rem; }
+    .headline {
+        font-size: 3rem;
+    }
+
     .journey-stages {
         flex-direction: column;
         padding-top: 0;
     }
+
     .journey-stages::before {
         left: 30px;
-        top: 0; bottom: 0;
-        width: 2px; height: auto;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: auto;
     }
+
     .stage {
         text-align: left;
         padding: 0 0 0 60px;
         margin-bottom: 40px;
     }
+
     .stage-dot {
         position: absolute;
         left: 20px;
         top: 0;
         margin: 0;
     }
-    .question-headline { font-size: 2.2rem; }
-    .trust-signals { flex-direction: column; gap: 15px; }
-    .metrics-grid { grid-template-columns: 1fr; }
-    .footer-content { flex-direction: column; text-align: center; }
+
+    .question-headline {
+        font-size: 2.2rem;
+    }
+
+    .trust-signals {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header {
+        height: 70px;
+        /* Lite lägre på mobil */
+    }
+
+    .main-nav a:not(.nav-cta) {
+        display: none;
+        /* Dölj alla länkar utom CTA:n */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        /* Lite mindre logo */
+    }
 }
