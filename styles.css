@@ -4,14 +4,14 @@
    ==============================
 */
 :root {
-    --color-dark: #141413;
+    --color-dark: #201f26;
     --color-light: #faf9f5;
-    --color-mid-gray: #b0aea5;
+    --color-mid-gray: #e3e3e2;
     --color-light-gray: #e8e6dc;
 
     --color-accent-orange: #d97757;
-    --color-accent-blue: #6a9bcc;
-    --color-accent-green: #788c5d;
+    --color-accent-blue: #cea43a;
+    --color-accent-green: #799652;
 
     --font-heading: 'Poppins', Arial, sans-serif;
     --font-body: 'Lora', Georgia, serif;
@@ -725,7 +725,7 @@ a {
 }
 
 .header-scrolled {
-    background-color: rgba(20, 20, 19, 0.98);
+    background-color: rgba(32, 31, 34, 0.98);
     /* Blir nästan helt mörk */
     height: 70px;
     /* Krymper lite */
